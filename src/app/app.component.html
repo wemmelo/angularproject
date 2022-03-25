@@ -2,8 +2,7 @@
   <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
+      <p class="lead">Testar implementação do BootStrap.</p>
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <button class="btn btn-primary btn-lg" type="button">Learn more</button>
@@ -16,13 +15,16 @@
     primeira forma - interpolação para receber dados dinâmicos
 -->
 <div class="container">
-  <h1>Título do projeto {{title}} e {{data}}</h1>
-  <h2>Após adicionar 10 anos a data {{10+getData()}}</h2>
+  <h1 class="row d-flex justify-content-center">Data binding interpolação</h1>
+  <h2>Título do projeto {{title}} e {{data}}</h2>
+  <h3>Após adicionar 10 anos a data {{10+getData()}}</h3>
 </div>
 
 <!--Aqui abaixo vamos aprender a reagir a interação do usuário, por exemplo clicando em um botão, digitando algo, foco ...
 para isso vamos trabalhar com o event binding-->
 <div class="container">
+  <br>
+  <h1 class="row d-flex justify-content-center">Data binding event binding</h1>
   <div class="alert alert-primary" role="alert">
     Nome do projeto <strong>{{title}}</strong>
   </div>
