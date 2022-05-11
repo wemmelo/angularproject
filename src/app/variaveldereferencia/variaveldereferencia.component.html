@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="alert alert-primary" role="alert">
+        Resultado <strong>{{resultado}}</strong>
+    </div>
+
+    <div class="mb-3">
+        <label>Primeiro Valor</label>
+        <input type="number" class="form-control" #primeiroInput>
+    </div>
+    <div class="mb-3">
+        <label>Segundo Valor</label>
+        <input type="number" class="form-control" #segundoInput>
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="somar(primeiroInput.valueAsNumber, segundoInput.valueAsNumber)">Somar</button>
+
+</div>
