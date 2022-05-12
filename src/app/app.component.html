@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [hidden]="true">
 
   <div class="alert alert-primary" role="alert">
     Funcionário adicionado: <strong>{{nome}}</strong>
@@ -21,7 +21,7 @@
 </div>
 <!--exibir dados condicionalmente através das diretivas
  1 diretiva estrutural-->
-<div>
+<div [hidden]="true">
 
   <div class="alert alert-primary" role="alert" *ngIf="adicionado">
     Funcionário adicionado: <strong>{{nome}}</strong>
@@ -37,6 +37,32 @@
 
 </div>
 <!--9.13. Iterando com a diretiva ngFor-->
+<div [hidden]="true">
+
+  <div class="alert alert-primary" role="alert" *ngIf="adicionado">
+    Funcionário adicionado: <strong>{{nome}}</strong>
+  </div>
+
+  <div class="mb-3">
+    <label>Nome</label>
+    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="adicionar()" [disabled]="nome.length == 0">Adicionar</button>
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-2" *ngFor="let funcionario of funcionarios">
+      <div class="card">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{funcionario.id}}.jpg"
+          alt="Card image cap">
+        <div class="card-body">{{funcionario.nome}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- passar dados para entidades customizadas dos componentes
+aula 9.4-->
 <div>
 
   <div class="alert alert-primary" role="alert" *ngIf="adicionado">
@@ -48,17 +74,10 @@
     <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado = false">
   </div>
 
-
   <button type="button" class="btn btn-primary" (click)="adicionar()" [disabled]="nome.length == 0">Adicionar</button>
   <div class="row" style="margin-top: 20px;">
-    <div class="col-2" *ngFor="let funcionario of funcionarios">
-      <div class="card">
-
-        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/{{funcionario.id}}.jpg" alt="Card image cap">
-        <div class="card-body">{{funcionario.nome}}
-        </div>
-      </div>
+    <div class="col-2" *ngFor="let f of funcionarios">
+      <app-funcionario-card [funcionario]="f"></app-funcionario-card>
     </div>
-   
   </div>
 </div>
