@@ -9,7 +9,7 @@ export class AppComponent {
   ultimoId = 0;
   nome = "Wellington";
   adicionado = false;
-  funcionarios = [];
+  funcionarios = [{id:this.ultimoId, nome:this.nome}];
 
   adicionar() {
     console.log(`Adicionando ${this.nome}`);

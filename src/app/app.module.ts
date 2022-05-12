@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { InterpolacaoComponent } from './interpolacao/interpolacao.component';
 import { VariaveldereferenciaComponent } from './variaveldereferencia/variaveldereferencia.component';
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { VariaveldereferenciaComponent } from './variaveldereferencia/variavelde
     AppComponent,
     EventbindingComponent,
     InterpolacaoComponent,
-    VariaveldereferenciaComponent
+    VariaveldereferenciaComponent,
+    FuncionarioCardComponent
   ],
   imports: [
     BrowserModule,
